@@ -23,13 +23,6 @@ jobs:
     - name: 'Use gcloud CLI'
       run: gcloud info
 
-    #- name: Set up Google Cloud SDK
-     # uses: google-github-actions/setup-gcloud@v1.0.0
-      #with:
-       # project_id: makereremanifest
-        #service_account_email: demo-950@makereremanifest.iam.gserviceaccount.com
-        #service_account_key: ${{ secrets.SERVICE_ACCOUNT_KEY }}
-
     - name: Configure Docker
       run: |
        gcloud auth print-access-token | docker login -u oauth2accesstoken \
