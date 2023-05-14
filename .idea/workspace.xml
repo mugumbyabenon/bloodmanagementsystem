@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b4d56734-e980-452b-a1f3-9f4eeb3cf1a1" name="Changes" comment="ghghgh">
       <change beforePath="$PROJECT_DIR$/.github/workflows/pipeline_gcr_ghcr.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/pipeline_gcr_ghcr.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +202,21 @@
       <option name="project" value="LOCAL" />
       <updated>1684094958441</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="ghghgh">
+      <created>1684097260356</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1684097260356</updated>
+    </task>
+    <task id="LOCAL-00025" summary="ghghgh">
+      <created>1684097592588</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1684097592588</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
