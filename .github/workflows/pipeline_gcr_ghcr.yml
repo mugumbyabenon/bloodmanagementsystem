@@ -33,4 +33,4 @@ jobs:
       with:
         dockerfile: Dockerfile
         push: true
-        tags: gcr.io/makereremanifest/bloodmanagementsystem:latest
+        tags: gcr.io/makereremanifest/bloodmanagementsystem:12
