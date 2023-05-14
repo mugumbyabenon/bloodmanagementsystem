@@ -1,0 +1,25 @@
+Index: .github/workflows/docker-image.yml
+===================================================================
+diff --git a/.github/workflows/docker-image.yml b/.github/workflows/docker-image.yml
+deleted file mode 100644
+--- a/.github/workflows/docker-image.yml	(revision c20dea5741c1319266d978e08b01ada929e789b0)
++++ /dev/null	(revision c20dea5741c1319266d978e08b01ada929e789b0)
+@@ -1,18 +0,0 @@
+-name: Docker Image CI
+-
+-on:
+-  push:
+-    branches: [ "main" ]
+-  pull_request:
+-    branches: [ "main" ]
+-
+-jobs:
+-
+-  build:
+-
+-    runs-on: ubuntu-latest
+-
+-    steps:
+-    - uses: actions/checkout@v3
+-    - name: Build the Docker image
+-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
