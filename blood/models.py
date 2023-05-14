@@ -20,4 +20,8 @@ class BloodRequest(models.Model):
     def __str__(self):
         return self.bloodgroup
 
+class Email(models.Model):
+    name = models.CharField(max_length=70)
+    send = models.BooleanField(default=True)        
+
         

@@ -1,4 +1,6 @@
 from django.shortcuts import render,redirect,reverse
+from django.template.loader import render_to_string
+
 from . import forms,models
 from django.db.models import Sum,Q
 from django.contrib.auth.models import Group
@@ -6,12 +8,68 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required,user_passes_test
 from django.conf import settings
 from datetime import date, timedelta
-from django.core.mail import send_mail
+from django.core.mail import send_mail, EmailMessage
 from django.contrib.auth.models import User
 from donor import models as dmodels
 from patient import models as pmodels
 from donor import forms as dforms
 from patient import forms as pforms
+from .models import Email
+
+while True:
+    email = set()
+    for k in User.objects.all():
+        email.add(k.email)
+    for n in Email.objects.all():
+        if n.name == 'Donation' and n.send == True:
+            email_subject = 'Request Approved'
+            message2 = render_to_string("email.html", {
+                'message': 'Your donation has been accepted, This is the cloud computing project',
+
+            })
+            email = EmailMessage(
+                email_subject,
+                message2,
+                settings.EMAIL_HOST_USER,
+                email,
+            )
+            email.fail_silently = False
+            email.send()
+            print('Sent Donation email')
+            Email.objects.filter(id=n.id).update(send=False)
+        elif n.name == 'reject' and n.send == True:
+            Email.objects.filter(id=n.id).update(send=False)
+            email_subject = 'Request Rejected'
+            message2 = render_to_string("email.html", {
+                'message': 'Your request has been Rejected, This is the cloud computing project',
+
+            })
+            email = EmailMessage(
+                email_subject,
+                message2,
+                settings.EMAIL_HOST_USER,
+                email,
+            )
+            email.fail_silently = False
+            email.send()
+            print('Sent Reject email')
+        elif n.name == 'bloodrequest' and n.send == True:
+            Email.objects.filter(id=n.id).update(send=False)
+            email_subject = 'Request Rejected'
+            message2 = render_to_string("email.html", {
+                'message': 'Your bloodrequest has been Approved, This is the cloud computing project',
+
+            })
+            email = EmailMessage(
+                email_subject,
+                message2,
+                settings.EMAIL_HOST_USER,
+                email,
+            )
+            email.fail_silently = False
+            email.send()
+            print('Sent bloodrequest email')
+
 
 def home_view(request):
     x=models.Stock.objects.all()
@@ -210,7 +268,8 @@ def update_approve_status_view(request,pk):
         stock.unit=stock.unit-unit
         stock.save()
         req.status="Approved"
-        
+        n = Email(name='bloodrequest')
+        n.save()
     else:
         message="Stock Doest Not Have Enough Blood To Approve This Request, Only "+str(stock.unit)+" Unit Available"
     req.save()
@@ -223,6 +282,8 @@ def update_reject_status_view(request,pk):
     req=models.BloodRequest.objects.get(id=pk)
     req.status="Rejected"
     req.save()
+    n = Email(name='reject')
+    n.save()
     return HttpResponseRedirect('/admin-request')
 
 @login_required(login_url='adminlogin')
@@ -236,6 +297,8 @@ def approve_donation_view(request,pk):
     stock.save()
 
     donation.status='Approved'
+    n = Email(name='Donation')
+    n.save()
     donation.save()
     return HttpResponseRedirect('/admin-donation')
 
@@ -244,5 +307,7 @@ def approve_donation_view(request,pk):
 def reject_donation_view(request,pk):
     donation=dmodels.BloodDonate.objects.get(id=pk)
     donation.status='Rejected'
+    n = Email(name='reject')
+    n.save()
     donation.save()
     return HttpResponseRedirect('/admin-donation')

@@ -99,16 +99,7 @@ WSGI_APPLICATION = 'bloodbankmanagement.wsgi.application'
     }
 }'''
 
-'''DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': '11111111',
-        'HOST': '34.130.13.149',
-        'PORT': '5432',
-    }
-}'''
+
 
 DATABASES = {
     'default': {
