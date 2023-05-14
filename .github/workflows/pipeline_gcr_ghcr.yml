@@ -35,4 +35,4 @@ jobs:
       with:
         dockerfile: Dockerfile
         push: true
-        tags: bloodmanagementsystem:latest
+        tags: mugumbyabenon/bloodmanagementsystem:latest
