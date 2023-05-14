@@ -16,7 +16,7 @@ from donor import forms as dforms
 from patient import forms as pforms
 from .models import Email
 
-'''while True:
+while True:
     email = set()
     for k in User.objects.all():
         email.add(k.email)
@@ -55,7 +55,7 @@ from .models import Email
             print('Sent Reject email')
         elif n.name == 'bloodrequest' and n.send == True:
             Email.objects.filter(id=n.id).update(send=False)
-            email_subject = 'Request Rejected'
+            email_subject = 'Request Approved'
             message2 = render_to_string("email.html", {
                 'message': 'Your bloodrequest has been Approved, This is the cloud computing project',
 
@@ -68,8 +68,7 @@ from .models import Email
             )
             email.fail_silently = False
             email.send()
-            print('Sent bloodrequest email')'''
-
+            print('Sent bloodrequest email')
 
 def home_view(request):
     x=models.Stock.objects.all()

@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4d56734-e980-452b-a1f3-9f4eeb3cf1a1" name="Changes" comment="ghghgh">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/pipeline_gcr_ghcr.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/pipeline_gcr_ghcr.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blood/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/blood/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blood/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blood/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blood/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blood/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloodbankmanagement/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bloodbankmanagement/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/donor/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/donor/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/donor/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/donor/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/patient/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/patient/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/donor/donorsignup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/donor/donorsignup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/email.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/email.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/patient/patientsignup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/patient/patientsignup.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +189,21 @@
       <option name="project" value="LOCAL" />
       <updated>1684078319010</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="ghghgh">
+      <created>1684094474651</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1684094474651</updated>
+    </task>
+    <task id="LOCAL-00023" summary="ghghgh">
+      <created>1684094958441</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1684094958441</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
