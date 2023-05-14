@@ -28,7 +28,7 @@ jobs:
        #gcloud auth print-access-token | docker login -u oauth2accesstoken \
        #--password-stdin https://gcr.io
       run: |
-        docker login --username=mugumbyabenon --password:@Kibuuka1
+        docker login --username=mugumbyabenon --password=@Kibuuka1
         
 
     - name: Build and push Docker image
