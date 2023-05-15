@@ -17,7 +17,7 @@ from patient import forms as pforms
 from .models import Email
 
 print('waiting')
-'''while True:
+while True:
     email = set()
     for k in User.objects.all():
         email.add(k.email)
@@ -69,7 +69,7 @@ print('waiting')
             )
             email.fail_silently = False
             email.send()
-            print('Sent bloodrequest email')'''
+            print('Sent bloodrequest email')
 
 def home_view(request):
     x=models.Stock.objects.all()
